@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
+<rect width="600" height="440" fill="#fff9f6"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="40" y="60" font-size="13" letter-spacing="2" fill="#c13535" font-family="Menlo,Consolas,monospace">SUBSCRIBE &amp; FORGET</text>
+<circle cx="300" cy="220" r="110" fill="none" stroke="#f7d6d6" stroke-width="18"/>
+<path d="M300 110a110 110 0 1 1 -95 55" fill="none" stroke="#f13b3b" stroke-width="18" stroke-linecap="round"/>
+<polygon points="196,150 218,178 186,182" fill="#f13b3b"/>
+<text x="300" y="212" font-size="34" font-weight="bold" fill="#1a1113" text-anchor="middle">30</text>
+<text x="300" y="236" font-size="13" fill="#6b5f62" text-anchor="middle">days, on your schedule</text>
+<g font-size="12" fill="#1a1113" font-weight="bold"><text x="60" y="400">Pause</text><text x="180" y="400">Skip</text><text x="290" y="400">Change cadence</text><text x="470" y="400">Cancel</text></g>
+<g fill="#3f7a5e" font-size="12"><text x="44" y="400">✓</text><text x="164" y="400">✓</text><text x="274" y="400">✓</text><text x="454" y="400">✓</text></g>
+</g></svg>

@@ -1,15 +1,14 @@
-# Staph Aid — clickable prototype v0.2
+# Staph Aid — clickable prototype v0.5
 
-Static, responsive mockup of the new staphaid.com. No build step, no dependencies beyond Google Fonts.
+Static, responsive mockup of the new staphaid.com, built to the Grüns look-and-feel (measured layout,
+spacing, type and button sizes) with the Staph Aid palette. No build step; Google Fonts only.
 
-Pages: `index.html` (homepage) · `product.html` · `offer.html` (gym ad variant) · `cart.html` (drawer open over the homepage)
+Pages: `index.html` · `product.html` · `offer.html` (gym ad variant) · `cart.html` (drawer open over the homepage)
 
 ## Publish on GitHub Pages
-1. Create a repository (public, or private on a plan that allows Pages on private repos).
-2. Upload everything in this folder to the repo root — `index.html`, the other three pages, `css/`, `assets/`, `README.md`.
-3. Settings → Pages → Source "Deploy from a branch" → Branch `main`, folder `/ (root)` → Save.
-4. Live in about a minute at `https://<user>.github.io/<repo>/`.
+1. Upload everything in this folder to the repo root (drag-and-drop in the GitHub web UI; same names overwrite).
+2. Settings → Pages → Deploy from a branch → `main` / `/ (root)` → Save.
 
 ## Reading the mockup
-`[S]` = needs a substantiation source before ship · `[V]` = needs a fact check · `XX` = placeholder until real data exists.
-Review, rating and press slots are intentionally empty.
+`[S]` = needs a substantiation source · `[V]` = needs a fact check · `XX` = placeholder until real data exists.
+Photo placeholders carry their own shot brief. Review and rating slots are intentionally empty.

@@ -519,11 +519,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .header-right{background:var(--header-pill);border-radius:var(--r-pill);padding:5px 10px 5px 5px;gap:8px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .header-icon{color:var(--white)}
 .header-icon .dot{background:var(--secondary);border:0;width:9px;height:9px;top:3px;right:3px}
-.header + main > .hero{padding-top:116px}
-.header + main > .page-head{padding-top:124px}
-.header + main > .section-tight:first-child{padding-top:108px}
-@media(min-width:900px){.header + main > .page-head{padding-top:148px}}
-@media(min-width:1024px){.header + main > .hero{padding-top:132px}.header + main > .section-tight:first-child{padding-top:132px}}
+.header ~ main > .hero{padding-top:124px}
+.header ~ main > .page-head{padding-top:124px}
+.header ~ main > .section-tight:first-child{padding-top:108px}
+@media(min-width:900px){.header ~ main > .page-head{padding-top:148px}}
+@media(min-width:1024px){.header ~ main > .hero{padding-top:132px}.header ~ main > .section-tight:first-child{padding-top:132px}}
 @media(max-width:420px){.header .logo{padding:9px 16px}.header .logo img{height:22px}.header-right{gap:4px}}
 
 /* v0.7.4 colour icons in the announcement bar (Grüns uses emoji; ours are SVG so they look identical everywhere) */

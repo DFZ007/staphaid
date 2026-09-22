@@ -1,4 +1,4 @@
-# Staph Aid — clickable prototype v0.5
+# Staph Aid — clickable prototype v0.9
 
 Static, responsive mockup of the new staphaid.com, built to the Grüns look-and-feel (measured layout,
 spacing, type and button sizes) with the Staph Aid palette. No build step; Google Fonts only.

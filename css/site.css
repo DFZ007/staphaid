@@ -436,3 +436,455 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .cmp-row:last-child{border-bottom:0}
 .cmp-head{background:var(--cream);border-bottom:1px solid var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3);font-weight:400}
 .cmp-row .no{color:var(--fg3);font-weight:500}
+
+/* ---------------------------------------------------------------- v0.6 secondary pages */
+.page-head{background:var(--cream);padding:80px 0 72px;text-align:center}
+.page-head .h1{margin:0 auto;max-width:14ch}
+.page-head .lead{margin:20px auto 0;max-width:620px}
+.prose{max-width:720px;margin:0 auto}
+.prose p{font-size:17px;line-height:1.7;font-weight:500;color:var(--fg1);margin:0 0 22px}
+.prose h3{font-family:var(--font);font-weight:700;font-size:24px;letter-spacing:-.03em;margin:40px 0 14px}
+.prose p:last-child{margin-bottom:0}
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.form{display:grid;gap:16px}
+.field{display:grid;gap:7px}
+.field label{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg2)}
+.field input,.field textarea{font-family:var(--font);font-size:16px;font-weight:500;color:var(--ink);background:var(--white);border:1px solid var(--ink);border-radius:14px;padding:14px 16px}
+.field textarea{min-height:140px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:2px solid var(--secondary);outline-offset:1px}
+.info-card{background:var(--cream);border:1px solid var(--ink);border-radius:var(--r-card);padding:32px}
+.info-card h3{font-size:20px;font-weight:700;letter-spacing:-.03em;margin:0 0 20px}
+.info-row{display:flex;gap:14px;padding:14px 0;border-top:1px solid rgba(26,17,19,.12)}
+.info-row:first-of-type{border-top:0;padding-top:0}
+.info-row i{color:var(--primary);flex:0 0 22px}
+.info-row i svg{width:22px;height:22px}
+.info-row b{display:block;font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg2);font-weight:400}
+.info-row span{font-size:16px;font-weight:600}
+.kit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.kit{background:var(--cream);border:1px solid var(--ink);border-radius:var(--r-card);overflow:hidden}
+.kit img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-bottom:1px solid var(--ink)}
+.kit div{padding:18px}
+.kit b{display:block;font-size:17px;font-weight:700;letter-spacing:-.02em}
+.kit p{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--fg2)}
+.ladder{display:grid;gap:14px;max-width:760px;margin:0 auto}
+.rung{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;background:var(--white);border:1px solid var(--ink);border-radius:var(--r-card);padding:20px 24px}
+.rung.on{border-width:2px;border-color:var(--primary);background:var(--off-white)}
+.rung i{width:44px;height:44px;border-radius:var(--r-pill);background:var(--secondary);color:var(--secondary-content);display:grid;place-items:center}
+.rung i svg{width:22px;height:22px}
+.rung b{display:block;font-size:19px;font-weight:700;letter-spacing:-.02em}
+.rung small{display:block;font-size:14px;color:var(--fg2);margin-top:3px}
+.rung .price{white-space:nowrap;text-align:right}
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .kit-grid{grid-template-columns:repeat(2,1fr)}
+  .page-head{padding:56px 0 48px}
+  .rung{grid-template-columns:auto 1fr;gap:14px;padding:18px}
+  .rung .price{grid-column:2;text-align:left}
+}
+
+/* ---------------------------------------------------------------- v0.7 section grounds
+   Grüns alternates three grounds: off-white, white, and a solid brand band. Ours:
+   tint #fde9e3 · white · solid red (primary-strong, so body text passes 5.49:1) or purple (9.16:1). */
+:root{--tint:#fde9e3}
+.bg-white{background:var(--white)}
+.bg-tint{background:var(--tint)}
+.bg-red{background:var(--primary-strong);color:var(--primary-content)}
+.bg-purple{background:var(--secondary);color:var(--secondary-content)}
+.bg-red .h2,.bg-red .h2-sans,.bg-purple .h2,.bg-purple .h2-sans{color:var(--white)}
+.bg-red .lead,.bg-purple .lead{color:var(--fg1i)}
+.bg-red .eyebrow,.bg-purple .eyebrow{color:var(--fg2i)}
+.bg-red > .wrap .small,.bg-purple > .wrap .small,.bg-red .cta-stack .small,.bg-purple .cta-stack .small{color:var(--fg2i)}
+.bg-red .marker,.bg-purple .marker{color:var(--fg2i)}
+.bg-red .proof b,.bg-red .proof span{color:var(--white)}
+.bg-red .proof small{color:var(--fg2i)}
+.bg-red .btn-primary{background:var(--white);color:var(--primary-strong)}
+.bg-red .btn-primary:hover{background:var(--off-white)}
+.bg-red .card,.bg-purple .card{color:var(--ink);border-color:transparent}
+.bg-red .card .small,.bg-purple .card .small{color:var(--fg3)}
+.bg-tint .press-item q{color:var(--fg1)}
+.press.bg-white{border-block:1px solid rgba(26,17,19,.08)}
+
+/* v0.7.1 lifestyle hero photo — hard-offset shadow per rule 4; badge moved off the face */
+.hero-photo img{aspect-ratio:1000/741}
+.hero-photo .hero-badge{top:auto;right:auto;bottom:-22px;left:-14px}
+@media(min-width:1024px){.hero-photo .hero-badge{bottom:-32px;left:-32px}}
+
+/* v0.7.3 floating header — Grüns treatment: no bar; white logo in a muted pill on the left,
+   Shop Now + cart + menu grouped in a second pill on the right. Content slides under it. */
+:root{--header-pill:#deb2ac}
+.header{background:transparent;margin-bottom:-68px;pointer-events:none}
+.header-in > *{pointer-events:auto}
+.header .logo{display:flex;align-items:center;background:var(--header-pill);border-radius:var(--r-pill);padding:10px 20px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.header .logo img{height:26px}
+.header-right{background:var(--header-pill);border-radius:var(--r-pill);padding:5px 10px 5px 5px;gap:8px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.header-icon{color:var(--white)}
+.header-icon .dot{background:var(--secondary);border:0;width:9px;height:9px;top:3px;right:3px}
+.header + main > .hero{padding-top:116px}
+.header + main > .page-head{padding-top:124px}
+.header + main > .section-tight:first-child{padding-top:108px}
+@media(min-width:900px){.header + main > .page-head{padding-top:148px}}
+@media(min-width:1024px){.header + main > .hero{padding-top:132px}.header + main > .section-tight:first-child{padding-top:132px}}
+@media(max-width:420px){.header .logo{padding:9px 16px}.header .logo img{height:22px}.header-right{gap:4px}}
+
+/* v0.7.4 colour icons in the announcement bar (Grüns uses emoji; ours are SVG so they look identical everywhere) */
+:root{--gold-weakest:#fff4d6;--icon-gold:#ffc83d;--icon-gold-deep:#e09f00;--icon-kraft:#c98b4f;--icon-kraft-light:#e3ac70;--icon-kraft-dark:#a2672e;--icon-tape:#f1d9ae;--icon-steel:#c3cad2;--icon-violet:#9b80ea;--icon-violet-light:#b9a5f5}
+.announce svg.ci{width:20px;height:20px}
+.announce .ann-slide{font-weight:600}
+
+/* v0.7.5 logo drop shadow — Grüns lifts its white wordmark off the pill with a soft dark shadow */
+.header .logo img{filter:drop-shadow(0 1.5px 1.5px rgba(74,18,22,.4))}
+
+/* v0.7.6 two-colour hero headline — Grüns sets line one dark, line two in the brand colour */
+.h1-duo .duo-a{color:var(--primary-deep)}
+.h1-duo .duo-b{color:var(--primary)}
+
+/* v0.7.7 hero stats — Grüns' "number on a shape" treatment. Their shape is a yellow blob;
+   ours is a tilted two-tone capsule (the product), salmon + lavender, number in deep red. */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:520px;margin-top:8px}
+.stat{flex-direction:column;align-items:center;text-align:center;gap:0;max-width:none}
+.stat b{position:relative;z-index:0;display:inline-block;font-family:var(--display);font-weight:700;font-size:clamp(40px,4vw,52px);line-height:1;letter-spacing:-.01em;color:var(--primary-deep);padding:14px 6px 0}
+.stat b::before{content:"";position:absolute;z-index:-1;left:50%;top:2px;width:1.75em;height:.95em;border-radius:var(--r-pill);transform:translateX(-50%) rotate(-18deg);background:linear-gradient(90deg,var(--primary-weak) 0 50%,var(--secondary-weak) 50% 100%)}
+.stat > div{margin-top:8px}
+.stat span{font-family:var(--font);font-size:18px;font-weight:700;letter-spacing:-.03em;line-height:1.15;color:var(--primary-deep)}
+.stat small{font-size:13px;font-weight:600;color:var(--fg2);margin-top:4px;line-height:1.3}
+@media(min-width:1024px){.stats{justify-content:start}}
+@media(max-width:420px){.stat span{font-size:15px}.stat small{font-size:12px}}
+
+/* v0.7.8 hero copy broken into kicker / bold lead / supporting line */
+.hero-kicker{display:inline-block;background:var(--secondary);color:var(--secondary-content);font-family:var(--font);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-radius:var(--r-pill);padding:7px 14px;margin-bottom:14px}
+.hero-copy-body{display:flex;flex-direction:column;gap:12px;margin-top:0}
+.hero-copy .h1-duo{margin:0}
+.hero-copy .hero-kicker{margin-bottom:-10px}
+.hero-lead{font-size:clamp(19px,1.6vw,22px);line-height:1.4;font-weight:700;letter-spacing:-.02em;color:var(--primary-deep);max-width:30ch;margin:0}
+.hero-copy-body .lead{margin:0;max-width:44ch}
+.hero-copy-body .lead em{font-style:normal;font-weight:700;color:var(--primary-strong)}
+@media(max-width:1023px){.hero-lead,.hero-copy-body .lead{margin-inline:auto}}
+
+/* v0.7.9 hero rating line — Grüns' stars + review count above the headline */
+.hero-rating{display:flex;flex-direction:column;gap:2px;font-size:17px;font-weight:600;color:var(--primary-deep);margin-bottom:-8px}
+.hero-rating .hr-top{display:flex;align-items:center;gap:8px}
+.hero-rating .hr-stars{display:inline-flex;gap:2px;color:var(--primary)}
+.hero-rating .hr-stars svg{width:20px;height:20px;fill:currentColor}
+.hero-rating b{color:var(--primary-strong);font-weight:700}
+.hero-rating .hr-sub{font-size:16px}
+@media(max-width:1023px){.hero-rating{align-items:center}}
+
+/* v0.7.10 tiles: body grows so every Add to Cart sits on the same line; price pinned to the bottom of the copy */
+.tile-body{flex-grow:1}
+.tile-body .price{margin-top:auto;padding-top:6px}
+
+/* v0.7.11 clean-review mode (Dan): the bracketed [V]/[S]/Brad notes stay in the source and in
+   docs/launch-checklist.md, but are hidden on the page. Delete this rule to show them again. */
+.marker{display:none!important}
+
+/* v0.7.12 contrast punch-up (Dan): secondary/tertiary text darkened.
+   fg2 .70→.82 (9.6:1 on tint) · fg3 .50→.70 (6.4:1, was 3.4 — failed AA) · muted #948a8d→#5e5356 (6.2:1, was 2.9) */
+:root{--fg2:rgba(26,17,19,.82);--fg3:rgba(26,17,19,.7);--muted:#5e5356;--fg2i:rgba(255,255,255,.9)}
+/* white on brand red is 3.74:1 — passes only as large text, so button labels go to 700 (18px bold counts as large) */
+.btn{font-weight:700}
+
+/* v0.7.13 scroll parallax on the big band (Grüns): the purple rises through the band as you scroll.
+   JS writes --gs/--ge (gradient start/end); without JS or with reduced motion it stays at the static 50%/87%. */
+.big{--gs:50%;--ge:87%;background:linear-gradient(to bottom,var(--primary) var(--gs),var(--secondary) var(--ge))}
+
+/* v0.8 Billy Bacillus — stands beside the footer wordmark (Grüns' bear slot, our character).
+   White sticker outline: his dark outline and arms vanish on the deep-red footer without it. */
+.wordmark-wrap{position:relative}
+.billy-foot{position:absolute;right:max(10px,9vw);top:clamp(4px,2.4vw,40px);width:clamp(74px,12vw,176px);height:auto;transform:rotate(8deg);pointer-events:none;filter:drop-shadow(3px 0 0 var(--white)) drop-shadow(-3px 0 0 var(--white)) drop-shadow(0 3px 0 var(--white)) drop-shadow(0 -3px 0 var(--white)) drop-shadow(0 8px 0 rgba(0,0,0,.25))}
+@media(max-width:600px){.billy-foot{width:62px;right:4px;top:-26px}}
+
+/* v0.8.1 "Meet Bacillus subtilis" — Billy intro */
+.meet-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
+@media(min-width:900px){.meet-grid{grid-template-columns:.9fr 1.1fr;gap:64px}}
+.meet-art{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px}
+.meet-art img{width:min(78%,400px);height:auto}
+.meet-art figcaption{font-size:16px;color:var(--fg2);text-align:center}
+.meet-art figcaption b{color:var(--primary-deep)}
+.meet-copy{display:flex;flex-direction:column;gap:18px}
+.meet-h{margin:0;display:flex;flex-direction:column;gap:10px}
+.meet-a{font-family:var(--display);font-weight:700;font-size:clamp(40px,5vw,68px);line-height:1;color:var(--primary)}
+.meet-a i{font-style:italic}
+.meet-b{font-family:var(--font);font-weight:700;font-size:clamp(22px,2.2vw,30px);line-height:1.2;letter-spacing:-.03em;color:var(--primary-deep)}
+.meet-copy .lead{margin:0}
+.meet-points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.meet-points li{position:relative;padding-left:32px;font-weight:600;color:var(--fg1)}
+.meet-points li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:var(--r-pill);background:var(--sage) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/13px no-repeat}
+@media(max-width:899px){.meet-copy{align-items:center;text-align:center}.meet-copy .cta-stack{align-items:center!important}.meet-points{align-items:flex-start;margin-inline:auto}}
+.billy-float{animation:billy-bob 4s ease-in-out infinite}
+@keyframes billy-bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+@media(prefers-reduced-motion:reduce){.billy-float{animation:none}}
+
+/* v0.8.4 hero seal — Grüns-style scalloped badge (dark seal, curved type, character in the middle) with Billy */
+.hero-seal{position:absolute;left:-14px;bottom:-26px;width:150px;aspect-ratio:1;transform:rotate(-10deg);filter:drop-shadow(0 6px 0 rgba(26,17,19,.18))}
+@media(min-width:1024px){.hero-seal{left:-36px;bottom:-40px;width:200px}}
+.hero-seal svg{width:100%;height:100%;display:block;overflow:visible}
+.hero-seal .seal-body{fill:var(--secondary)}
+.hero-seal .seal-ring{fill:none;stroke:var(--secondary-weak);stroke-width:1.5;stroke-dasharray:3 4}
+.hero-seal .seal-text{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:.06em;fill:var(--white)}
+.hero-seal .seal-spark{fill:var(--icon-gold)}
+
+/* v0.8.6 review portraits (illustrated placeholders until real customer photos) */
+.rev .who{display:flex;align-items:center;gap:12px}
+.rev .who-pic{object-fit:cover;width:52px;height:52px;border-radius:50%;flex:0 0 52px;border:2px solid var(--white);box-shadow:0 0 0 1px var(--ink)}
+
+/* v0.8.7 proof stats as Grüns-style photo cards (white card, inset rounded photo, copy below) */
+.proof-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:40px 0}
+@media(min-width:1024px){.proof-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}}
+.proof-card{background:var(--white);border-radius:var(--r-card);padding:8px 8px 22px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.proof-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;margin-bottom:10px;background:var(--tint)}
+.bg-red .proof-card b{color:var(--primary);font-size:clamp(36px,3.4vw,52px)}
+.bg-red .proof-card span{color:var(--primary-deep);font-size:18px;font-weight:700;letter-spacing:-.02em}
+.bg-red .proof-card small{color:var(--fg2);font-size:14px}
+@media(max-width:600px){.proof-card{padding:6px 6px 16px}.bg-red .proof-card span{font-size:15px}}
+
+/* v0.8.10 header hover + keyboard focus states */
+.header .logo,.header-right .btn,.header-icon{transition:background-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.header .logo:hover{background:var(--primary);transform:translateY(-1px) rotate(-1.5deg)}
+.header .logo:active{transform:translateY(0) scale(.98)}
+.header-right .btn-secondary:hover{background:#3b2780;transform:translateY(-1px);box-shadow:0 3px 0 rgba(26,17,19,.18)}
+.header-right .btn-secondary:active{transform:translateY(0);box-shadow:none}
+.header-icon:hover{background:rgba(255,255,255,.32);transform:translateY(-1px)}
+.header-icon:active{transform:translateY(0) scale(.94)}
+.header .logo:focus-visible,.header-right .btn:focus-visible,.header-icon:focus-visible{outline:3px solid var(--secondary);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.header .logo:hover,.header-right .btn-secondary:hover,.header-icon:hover{transform:none}}
+
+/* v0.8.17 sticky header gets a frosted, slightly transparent bar so page content doesn't
+   show through between the pills while scrolling. Same tint as the hero, so it's invisible at the top. */
+:root{--header-bg:rgba(253,233,227,.86)}
+.header{background:var(--header-bg);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);pointer-events:auto;transition:box-shadow .2s ease}
+.header.is-scrolled{box-shadow:0 1px 0 rgba(26,17,19,.08),0 6px 18px -10px rgba(26,17,19,.25)}
+
+/* ---------------------------------------------------------------- v0.9 MEGA band
+   Proof cards + invisible threat as one long scroll section (Grüns' gummy-bear band). */
+.mega{--gs:96%;--ge:118%;background:linear-gradient(to bottom,var(--primary-strong) var(--gs),var(--secondary) var(--ge));padding:96px 0 0;position:relative;overflow:hidden}
+.mega > *:not(.mega-float){position:relative;z-index:1}
+.mega-proof{text-align:center;padding-bottom:40px}
+.mega-float{position:absolute;inset:0;z-index:0;pointer-events:none}
+.mega-float .fl{position:absolute;height:auto;transform:rotate(var(--r));will-change:transform;filter:drop-shadow(0 12px 16px rgba(26,17,19,.28))}
+.mega-float .fl.sticker{filter:drop-shadow(3px 0 0 var(--white)) drop-shadow(-3px 0 0 var(--white)) drop-shadow(0 3px 0 var(--white)) drop-shadow(0 -3px 0 var(--white)) drop-shadow(0 12px 14px rgba(26,17,19,.25))}
+@media(max-width:760px){.mega-float .fl{opacity:.55}.mega-float .fl.sticker{opacity:.9}}
+.mega-threat{padding-top:clamp(120px,18vw,260px);padding-bottom:56px}
+.mega .big-text span{display:block}
+.mega .big-stats{margin-bottom:0}
+.mega .big-sub{padding-top:72px}
+.mega-facts{display:flex;flex-direction:column;align-items:center;gap:.08em;padding:clamp(140px,18vw,240px) var(--gutter) 40px}
+.mega-facts span{display:block}
+.mega-facts .hl{color:var(--secondary-weak)}
+.mega-bag{display:flex;justify-content:center;padding-top:clamp(80px,10vw,140px)}
+.bag-wrap{position:relative;width:min(440px,72vw)}
+.bag-wrap .bag{position:relative;z-index:2;display:block;width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.28));
+  /* interim "torn open" edge until the real torn-pouch photo arrives */
+  clip-path:polygon(0 9%,6% 7.5%,11% 9.5%,17% 7%,23% 9%,29% 7.2%,35% 9.4%,41% 7.4%,47% 9.2%,53% 7%,59% 9.3%,65% 7.3%,71% 9.1%,77% 7.1%,83% 9.4%,89% 7.6%,95% 9%,100% 7.8%,100% 100%,0 100%);margin-bottom:-4%}
+.bag-wrap .bag-billy{position:absolute;z-index:1;left:50%;bottom:40%;width:46%;height:auto;transform:translate(-50%,0) rotate(-6deg);transition:transform .9s cubic-bezier(.34,1.56,.64,1) .15s}
+.mega-bag.in .bag-billy{transform:translate(-50%,-118%) rotate(6deg)}
+/* scroll reveal */
+.js .mega .rv{opacity:0;transform:translateY(48px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .mega .rv.in{opacity:1;transform:none}
+.js .mega .big-text .rv:nth-child(2),.js .mega-facts .rv:nth-child(2){transition-delay:.12s}
+.js .mega-facts .rv:nth-child(3){transition-delay:.24s}
+.js .mega-facts .rv:nth-child(4){transition-delay:.36s}
+.js .mega .mega-bag.rv{transform:translateY(120px)}
+.js .mega .mega-bag.rv.in{transform:none}
+@media(prefers-reduced-motion:reduce){.js .mega .rv{opacity:1;transform:none;transition:none}.bag-wrap .bag-billy{transition:none;transform:translate(-50%,-118%) rotate(6deg)}}
+
+/* v0.9.1 real torn packet, in two layers so Billy climbs out between the foil back and the red front */
+.bag-wrap{width:min(420px,70vw)}
+.bag-wrap .bag-back{position:relative;z-index:1;display:block;width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.28))}
+.bag-wrap .bag-front{position:absolute;z-index:3;inset:0;width:100%;height:auto}
+.bag-wrap .bag-billy{z-index:2;bottom:auto;top:22%;width:44%;transform:translate(-50%,0) rotate(-6deg)}
+.mega-bag.in .bag-billy{transform:translate(-50%,-118%) rotate(5deg)}
+.mega-bag{padding-bottom:0}
+.mega-bag .bag-wrap{margin-bottom:-2px}
+@media(prefers-reduced-motion:reduce){.bag-wrap .bag-billy{transform:translate(-50%,-118%) rotate(5deg)}}
+
+/* v0.9.2 packet: breathing room below it, and Billy's pop is tied to the packet being on screen (.pop), not the reveal */
+.mega-bag{padding-bottom:clamp(64px,8vw,112px)}
+.mega-bag .bag-wrap{margin-bottom:0}
+.mega-bag.in .bag-billy{transform:translate(-50%,0) rotate(-6deg)}
+.mega-bag.pop .bag-billy{transform:translate(-50%,-118%) rotate(5deg)}
+.bag-wrap .bag-billy{transition:transform .85s cubic-bezier(.34,1.56,.64,1) .2s}
+@media(prefers-reduced-motion:reduce){.mega-bag .bag-billy,.mega-bag.in .bag-billy{transform:translate(-50%,-118%) rotate(5deg)}}
+
+/* v0.9.3 testing cards: square-ish like Grüns, one bold label line, cleaner thin-line icons */
+.test-cards{gap:12px}
+.test-card{aspect-ratio:1/1.02;min-height:0;padding:18px 14px;gap:16px;background:rgba(0,0,0,.32);border-radius:var(--r-card)}
+.test-card svg{width:52px;height:52px;color:var(--white);opacity:.95}
+.test-card span{font-size:16px;font-weight:700;letter-spacing:-.01em;line-height:1.25;color:var(--white);max-width:12ch}
+.test-card span b{font:inherit;color:inherit}
+@media(max-width:600px){.test-card{aspect-ratio:auto;padding:22px 12px}.test-card span{font-size:15px}}
+
+/* v0.9.4 fixed side tab (Grüns' "Get 55% Off" pill) — opens the SMS capture in the footer */
+.promo-tab{position:fixed;left:0;top:50%;z-index:35;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;background:var(--secondary);color:var(--secondary-content);border-radius:0 var(--r-card) var(--r-card) 0;box-shadow:2px 4px 14px rgba(26,17,19,.22);transition:background-color .18s ease,padding .18s ease}
+.promo-tab[hidden]{display:none}
+.promo-tab a{writing-mode:vertical-rl;transform:rotate(180deg);color:inherit;text-decoration:none;font-family:var(--font);font-weight:700;font-size:15px;letter-spacing:.01em;padding:18px 11px 12px;white-space:nowrap}
+.promo-tab button{order:-1;background:none;border:0;color:inherit;font-size:20px;line-height:1;padding:12px 11px 2px;cursor:pointer;opacity:.85}
+.promo-tab:hover{background:#3b2780;padding-left:4px}
+.promo-tab a:focus-visible,.promo-tab button:focus-visible{outline:2px solid var(--white);outline-offset:-4px;border-radius:6px}
+@media(max-width:600px){.promo-tab a{font-size:13px;padding:14px 9px 10px}.promo-tab button{font-size:17px;padding:10px 9px 2px}}
+
+/* ---------------------------------------------------------------- v0.9.5 benefit sections */
+/* Daily protection: cards with a gradient art panel (same purple→red as the product tiles) and a big illustrated icon */
+.ben-art-grid{gap:20px}
+.ben2{padding:0;overflow:hidden;display:flex;flex-direction:column;text-align:center;transition:transform .2s ease,box-shadow .2s ease}
+.ben2:hover{transform:translateY(-4px);box-shadow:3px 4px 0 0 var(--ink)}
+.ben2-art{position:relative;height:150px;display:grid;place-items:center;background:linear-gradient(to bottom,var(--secondary) 0%,var(--primary) 100%);overflow:hidden}
+.ben2-art::before,.ben2-art::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.14)}
+.ben2-art::before{width:120px;height:120px;left:-30px;top:-40px}
+.ben2-art::after{width:80px;height:80px;right:-18px;bottom:-26px}
+.ben2-art .bi{position:relative;z-index:1;width:96px;height:96px;padding:14px;background:var(--white);border-radius:50%;box-shadow:0 8px 0 rgba(26,17,19,.18)}
+.ben2:nth-child(2) .ben2-art{background:linear-gradient(to bottom,var(--primary) 0%,var(--secondary) 100%)}
+.ben2:nth-child(3) .ben2-art{background:linear-gradient(135deg,var(--secondary) 0%,var(--primary) 100%)}
+.ben2:nth-child(4) .ben2-art{background:linear-gradient(225deg,var(--secondary) 0%,var(--primary) 100%)}
+.ben2-body{padding:22px 22px 26px;display:flex;flex-direction:column;gap:8px;align-items:center}
+.ben2-body b{font-size:22px;letter-spacing:-.03em;color:var(--primary-deep)}
+.ben2-body p{font-size:15px;line-height:1.55;color:var(--fg2);margin:0}
+
+/* Proven benefits: 2×2 pastel feature cards, icon badge left, big number watermark */
+.feat-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:900px){.feat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+.feat{position:relative;overflow:hidden;display:flex;gap:20px;align-items:flex-start;text-align:left;padding:28px 28px 30px;border-radius:var(--r-card);border:1px solid var(--ink);transition:transform .2s ease,box-shadow .2s ease}
+.feat:hover{transform:translateY(-4px);box-shadow:3px 4px 0 0 var(--ink)}
+.f-lav{background:var(--secondary-weakest)}
+.f-sage{background:var(--sage-weakest)}
+.f-gold{background:var(--gold-weakest,#fff4d6)}
+.f-rose{background:var(--white)}
+.feat-ico{flex:0 0 84px;height:84px;border-radius:50%;background:var(--white);display:grid;place-items:center;box-shadow:0 6px 0 rgba(26,17,19,.12)}
+.f-rose .feat-ico{background:var(--tint)}
+.feat-ico .bi{width:60px;height:60px}
+.feat em{display:block;font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--secondary)}
+.feat b{display:block;font-size:26px;letter-spacing:-.03em;color:var(--primary-deep);margin:4px 0 8px}
+.feat p{font-size:15.5px;line-height:1.6;color:var(--fg2);margin:0;max-width:46ch}
+.feat-n{position:absolute;right:18px;top:6px;font-family:var(--display);font-weight:700;font-size:72px;line-height:1;color:rgba(26,17,19,.07);pointer-events:none}
+@media(max-width:560px){.feat{flex-direction:column;gap:14px;padding:24px}.feat-n{font-size:56px}}
+@media(prefers-reduced-motion:reduce){.ben2:hover,.feat:hover{transform:none}}
+
+/* v0.9.6 Billy's "100% organic" seal — sage (proof colour), tucked over his shoulder with a gentle wobble */
+.meet-billy{position:relative;display:flex;justify-content:center;width:100%}
+.billy-badge{position:absolute;z-index:2;right:max(0px,calc(50% - 230px));top:-6px;width:clamp(118px,13vw,150px);aspect-ratio:1;transform:rotate(12deg);filter:drop-shadow(0 6px 0 rgba(26,17,19,.16));animation:badge-wobble 5s ease-in-out infinite}
+.billy-badge svg{width:100%;height:100%;display:block;overflow:visible}
+.billy-badge .ob-body{fill:var(--sage)}
+.billy-badge .ob-ring{fill:none;stroke:var(--sage-weakest);stroke-width:1.6;stroke-dasharray:3 4}
+.billy-badge .ob-text{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.07em;fill:var(--white)}
+.billy-badge .ob-big{font-family:var(--display);font-weight:700;font-size:46px;letter-spacing:-.01em;fill:var(--white)}
+.billy-badge .ob-leaf{fill:var(--icon-gold)}
+.badge-legal{position:absolute;z-index:3;right:max(0px,calc(50% - 230px));top:clamp(112px,12.6vw,142px)}
+@keyframes badge-wobble{0%,100%{transform:rotate(12deg)}50%{transform:rotate(4deg) scale(1.03)}}
+@media(prefers-reduced-motion:reduce){.billy-badge{animation:none}}
+@media(max-width:600px){.billy-badge{right:4px;width:112px}.badge-legal{right:18px;top:106px}}
+
+/* ---------------------------------------------------------------- v0.9.7 buy section (Grüns PDP treatment) */
+.buy-hl{margin:0;display:flex;flex-direction:column;align-items:center;gap:4px;font-family:var(--font);font-weight:700;letter-spacing:-.05em;line-height:1.05;text-align:center;font-size:clamp(32px,4.4vw,60px);text-wrap:balance}
+.buy-hl .duo-a{color:var(--primary-deep)}
+.buy-hl .duo-b{color:var(--primary)}
+@media(min-width:1024px){.buy-grid{grid-template-columns:1.15fr 1fr;gap:48px}}
+
+/* gallery: vertical thumbs, framed promo image with overlays */
+.gal2{display:grid;grid-template-columns:1fr;gap:14px}
+.gal2 .thumbs{order:2;display:flex;gap:10px;overflow-x:auto;padding:2px}
+.gal2 .gallery-main{order:1}
+.gal2 > .btn,.gal2 .trust-card{order:3}
+@media(min-width:760px){
+  .gal2{grid-template-columns:84px 1fr;column-gap:16px}
+  .gal2 .thumbs{order:0;grid-row:1 / span 3;flex-direction:column;overflow:visible}
+  .gal2 .gallery-main,.gal2 > .btn,.gal2 .trust-card{grid-column:2}
+}
+.gal2 .thumb{width:78px;height:78px;border-radius:10px;flex:0 0 auto;cursor:pointer;transition:box-shadow .15s}
+.gal2 .thumb img{width:70px;height:70px}.gal2 .thumb img.cover{width:78px;height:78px}
+.gal2 .thumb:hover{box-shadow:0 0 0 2px var(--secondary-weak)}
+.gallery-main.promo{border:2px solid var(--ink);border-radius:var(--r-card);background:radial-gradient(circle at 30% 40%,var(--white) 0%,var(--tint) 70%);justify-content:flex-start}
+.gallery-main.promo > img{width:60%;max-height:76%;margin-left:0;margin-top:12%}
+.promo-burst{position:absolute;left:3%;top:3%;width:30%;aspect-ratio:1;transform:rotate(-12deg);filter:drop-shadow(0 4px 0 rgba(26,17,19,.18))}
+.promo-burst svg{width:100%;height:100%;display:block}
+.promo-burst polygon{fill:var(--icon-gold);stroke:var(--primary-deep);stroke-width:4;stroke-linejoin:round}
+.promo-burst span{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:700;font-size:clamp(12px,1.35vw,19px);line-height:1;color:var(--primary-deep)}
+.promo-points{position:absolute;right:3%;top:6%;width:36%;margin:0;padding:8px 12px;list-style:none;background:rgba(255,255,255,.94);border:1px solid rgba(26,17,19,.12);border-radius:16px;display:flex;flex-direction:column}
+.promo-points li{display:flex;align-items:center;gap:10px;padding:9px 0;font-size:clamp(12px,1.05vw,15px);font-weight:600;line-height:1.2;color:var(--primary-deep);border-top:1px solid rgba(26,17,19,.08)}
+.promo-points li:first-child{border-top:0}
+.promo-points i{flex:0 0 30px;height:30px;border-radius:50%;border:1.5px solid var(--primary-deep);display:grid;place-items:center;color:var(--primary-deep)}
+.promo-points i svg{width:17px;height:17px}
+.promo-corner{position:absolute;right:0;bottom:0;background:var(--primary-deep);color:var(--white);border-radius:18px 0 0 0;padding:14px 20px 16px;display:flex;flex-direction:column;gap:2px}
+.promo-corner small{font-size:clamp(12px,1.1vw,16px);font-weight:500}
+.promo-corner b{font-family:var(--font);font-size:clamp(28px,3.1vw,44px);letter-spacing:-.05em;line-height:1;color:var(--primary-weak)}
+.promo-corner span{font-size:clamp(12px,1.1vw,16px);font-weight:600}
+@media(max-width:600px){.promo-points{display:none}.gallery-main.promo > img{width:84%;margin:6% auto 0}}
+.trust-card{display:flex;align-items:center;gap:16px;padding:14px 18px;background:var(--white);border:1px solid rgba(26,17,19,.12);border-radius:12px;box-shadow:0 6px 16px -10px rgba(26,17,19,.35)}
+.trust-card svg{width:30px;height:30px;color:var(--secondary);flex-shrink:0;padding-right:14px;box-sizing:content-box;border-right:1px solid rgba(26,17,19,.12)}
+.trust-card b{display:block;font-size:14px;font-weight:600;color:var(--fg1)}
+.trust-card span{font-size:13px;color:var(--fg2)}
+
+/* buy box */
+.buybox{gap:22px}
+.rating-line{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600}
+.rating-line .hr-stars{display:inline-flex;gap:2px;color:var(--primary)}
+.rating-line .hr-stars svg{width:18px;height:18px;fill:currentColor}
+.rating-line a{color:var(--fg1);text-decoration:underline;text-underline-offset:3px}
+.buy-name{font-size:clamp(34px,3.4vw,48px)!important;color:var(--primary);margin:0}
+.buy-sub{font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.35;color:var(--fg1);margin:0}
+.buybox .checks{gap:10px}
+.buybox .checks > span{display:flex;align-items:center;font-size:16px}
+.buybox .checks > span::before{content:"";flex:0 0 18px;height:18px;margin-right:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233f7a5e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E") center/contain no-repeat}
+.opt-label{font-size:20px}
+.opt-label small{display:inline-flex;align-items:center;gap:6px;border:1.5px dashed var(--secondary-weak);color:var(--secondary);font-weight:600;font-size:13px;padding:4px 12px;background:var(--secondary-weakest)}
+.tiers{border:1.5px solid var(--ink);padding:0}
+.tier{transition:background-color .15s}
+.tier:not(.on):hover{background:var(--tint);border-radius:var(--r-pill)}
+.tier.on{background:var(--secondary);color:var(--white);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.tier.on small{color:rgba(255,255,255,.85)}
+.gwp-line{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--tint);border:1px dashed var(--primary-weak);border-radius:14px;color:var(--primary-deep);font-weight:500}
+.gwp-line svg{width:28px;height:28px;flex-shrink:0;color:var(--primary)}
+.gwp-line b{font-weight:700}
+.plan{border:1.5px solid var(--ink);border-radius:18px;transition:box-shadow .15s}
+.plan:not(.on):hover{box-shadow:3px 4px 0 0 var(--ink)}
+.plan-top{background:var(--primary-deep);color:var(--primary-weak);font-size:13px;letter-spacing:.06em;padding:11px 12px}
+.plan.on .plan-body{background:var(--tint)}
+.plan.on .plan-name i{border-color:var(--primary-deep);background:var(--primary-deep)}
+.plan-price b{font-size:24px}
+.plan-list .ck{color:var(--sage);font-weight:700;margin-right:4px}
+.buybox > .btn-lg{min-height:60px;font-size:20px;box-shadow:0 5px 0 0 var(--primary-deep)}
+.buybox > .btn-lg:hover{transform:translateY(2px);box-shadow:0 3px 0 0 var(--primary-deep)}
+
+.buybox .checks > span .legal{margin-left:8px}
+
+.checks .legal::before{content:none!important}
+
+/* v0.9.8 buy box extras + sticky gallery (Grüns: the photo column holds still while the buy column scrolls) */
+.buy-sticky{position:static!important}
+@media(min-width:1024px){.buy-grid{align-items:start}.buy-grid > .gallery{position:sticky;top:92px}}
+.auto-applied{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-style:italic;font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:var(--sage-strong);margin-top:-8px}
+.auto-applied svg{width:20px;height:20px}
+.returns-strip{background:var(--sage-weakest);border-radius:12px;padding:12px 16px;text-align:center;font-size:15px;color:var(--fg1)}
+.returns-strip b{font-weight:700}
+.triad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;text-align:center}
+.triad > div{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:14px;line-height:1.35;color:var(--fg1)}
+.triad i{width:46px;height:46px;border-radius:50%;border:1.8px solid var(--sage-strong);color:var(--sage-strong);display:grid;place-items:center}
+.triad i svg{width:22px;height:22px}
+.buybox .acc-wrap{max-width:none;margin:4px 0 0;padding:0;border-top:1px solid var(--ink)}
+.buybox .acc summary{font-size:19px}
+.bb-block{display:flex;flex-direction:column;gap:18px;padding-top:14px}
+.bb-h{margin:0;text-align:center;font-family:var(--font);font-weight:700;font-size:24px;letter-spacing:-.03em;color:var(--primary-deep)}
+.inside-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;text-align:center}
+.inside-row > div{display:flex;flex-direction:column;align-items:center;gap:10px}
+.inside-row b{font-size:15px;font-weight:700;color:var(--fg1);line-height:1.25}
+.ii{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-style:normal}
+.ii svg{width:30px;height:30px}
+.ii-a{background:var(--tint);color:var(--primary)}
+.ii-b{background:var(--secondary-weakest);color:var(--secondary)}
+.ii-c{background:var(--gold-weakest,#fff4d6);color:#d98a00}
+.free-from{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.free-from li{display:flex;align-items:center;gap:12px;font-size:15.5px;font-weight:500;color:var(--fg1)}
+.free-from li::before{content:"";flex:0 0 34px;height:34px;border-radius:50%;background:var(--sage-weakest) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c5a44' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Cpath d='M6.5 6.5l11 11'/%3E%3C/svg%3E") center/18px no-repeat}
+@media(max-width:420px){.free-from{grid-template-columns:1fr}.triad > div{font-size:13px}}
+
+/* v0.9.9 "in the wild" wheel — cards ride a big circle and drift right-to-left (Grüns) */
+.wild{padding-bottom:0;overflow:hidden}
+.wild-head{text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px}
+.wild-hl{margin:0;display:flex;flex-direction:column;font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:.95;letter-spacing:.01em;font-size:clamp(40px,6.4vw,92px)}
+.wild-hl .duo-b{color:var(--primary)}
+.wild-hl .duo-a{color:var(--primary-deep)}
+.wild-social{display:flex;gap:12px}
+.wild-social a{width:38px;height:38px;border-radius:10px;background:var(--primary);color:var(--white);display:grid;place-items:center;transition:transform .15s,background-color .15s}
+.wild-social a:hover{background:var(--primary-deep);transform:translateY(-2px)}
+.wild-social svg{width:21px;height:21px}
+.wheel{position:relative;height:clamp(330px,34vw,470px);margin-top:clamp(36px,5vw,64px)}
+.wcard{position:absolute;left:50%;top:0;margin:0;width:clamp(190px,21vw,300px);aspect-ratio:3/4;border-radius:28px;overflow:hidden;background:var(--white);box-shadow:0 18px 30px -18px rgba(26,17,19,.45);transition:opacity .4s ease;will-change:transform}
+.wcard img{width:100%;height:100%;object-fit:cover;display:block}

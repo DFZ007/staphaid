@@ -1772,3 +1772,7 @@ main:has(.pol){background:var(--white)}
 .hw-img:not(.st-art){aspect-ratio:4/5}
 .hw-img:not(.st-art) img{object-position:50% 20%!important}
 .qz-consent[hidden]{display:none}
+/* v0.9.75 (Dan): packet sits at the bottom of the pinned stage (Grüns-style), so when the pin releases
+   the next section follows right under it instead of half a screen of empty purple. */
+.bag-pin .bag-stage{align-items:flex-end;padding-bottom:clamp(28px,5vh,56px);box-sizing:border-box}
+@media(prefers-reduced-motion:reduce){.bag-pin .bag-stage{align-items:center;padding-bottom:80px}}

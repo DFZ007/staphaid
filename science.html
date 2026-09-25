@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex">
 <title>The science — Staph Aid prototype</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Fredoka:wght@600;700&family=DM+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/site.css?v=29144f88">
+<link rel="stylesheet" href="css/site.css?v=c66c538c">
 </head>
 <body>
 <div class="announce" aria-label="Announcements">
@@ -258,9 +258,10 @@ var au=box.querySelector('[data-eta]');if(au){var dt=new Date();dt.setDate(dt.ge
 <h2 class="qz-h qz-h-sm">You&rsquo;re in the right place.</h2>
 <p class="qz-p qz-why-line">Staph lives where you train. One capsule a day, from the inside.</p>
 <div class="qz-offer"><b>60% OFF</b><span>+ FREE Starter Kit</span></div>
-<form class="qz-form" onsubmit="return false"><input type="tel" inputmode="tel" autocomplete="tel" placeholder="Phone number" aria-label="Phone number"><button type="submit">Unlock 60% Off</button></form>
-<button type="button" class="qz-email">Email me instead</button>
-<p class="qz-consent">By entering your number you agree to receive recurring automated marketing texts from Staph Aid at the number provided. Consent is not a condition of purchase. Msg &amp; data rates may apply. Reply STOP to cancel. See Terms and Privacy.</p>
+<form class="qz-form" onsubmit="return false"><input type="email" inputmode="email" autocomplete="email" placeholder="Email address" aria-label="Email address"><button type="submit">Unlock 60% Off</button></form>
+<button type="button" class="qz-email">Text me instead</button>
+<p class="qz-consent" data-c="email">By signing up you agree to receive marketing emails from Staph Aid. Unsubscribe anytime. See Terms and Privacy.</p>
+<p class="qz-consent" data-c="sms" hidden>By entering your number you agree to receive recurring automated marketing texts from Staph Aid at the number provided. Consent is not a condition of purchase. Msg &amp; data rates may apply. Reply STOP to cancel. See Terms and Privacy.</p>
 </div>
 <div class="qz-step" data-step="3" hidden>
 <h2 class="qz-h qz-h-sm">60% off is yours.</h2>
@@ -276,7 +277,7 @@ var last;function open(){if(!q.hidden)return;last=document.activeElement;q.hidde
 function close(){q.classList.remove('on');document.documentElement.classList.remove('qz-lock');setTimeout(function(){q.hidden=true},250);try{localStorage.setItem('sa_qz','1')}catch(e){}if(last&&last.focus)last.focus()}
 q.querySelector('.qz-x').onclick=close;q.querySelector('.qz-no').onclick=close;
 [].forEach.call(q.querySelectorAll('[data-why]'),function(b){b.onclick=function(){q.querySelector('.qz-why-line').textContent=lines[b.dataset.why];step(2)}});
-q.querySelector('.qz-form').onsubmit=function(e){e.preventDefault();step(3);return false};q.querySelector('.qz-email').onclick=function(){var i=q.querySelector('.qz-form input');i.type='email';i.placeholder='Email address';i.setAttribute('aria-label','Email address');i.setAttribute('autocomplete','email');i.setAttribute('inputmode','email');this.hidden=true;i.focus()};
+q.querySelector('.qz-form').onsubmit=function(e){e.preventDefault();step(3);return false};/* v0.9.74 (Dan): email first; "Text me instead" swaps to phone and shows the SMS consent line. */q.querySelector('.qz-email').onclick=function(){var i=q.querySelector('.qz-form input');i.type='tel';i.placeholder='Phone number';i.setAttribute('aria-label','Phone number');i.setAttribute('autocomplete','tel');i.setAttribute('inputmode','tel');q.querySelector('[data-c=email]').hidden=true;q.querySelector('[data-c=sms]').hidden=false;this.hidden=true;i.focus()};
 document.addEventListener('keydown',function(e){if(!q.hidden&&e.key==='Escape')close()});
 [].forEach.call(document.querySelectorAll('[data-open-quiz]'),function(a){a.addEventListener('click',function(e){e.preventDefault();open()})});
 var seen=false;try{seen=localStorage.getItem('sa_qz')==='1'}catch(e){}

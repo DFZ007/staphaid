@@ -1767,3 +1767,8 @@ main:has(.pol){background:var(--white)}
 /* v0.9.72: review summary without a numeric average */
 .rw-score-nonum .rw-stars svg{width:26px;height:26px}
 .rw-score-nonum small{font-size:14px;font-weight:600;color:var(--ink)}
+/* v0.9.73 (Dan): people photos in the how-it-works cards were cropping heads at 5:4. The photos are 3:4,
+   so a 4:5 frame shows almost the whole shot; anchor near the top so faces never clip. */
+.hw-img:not(.st-art){aspect-ratio:4/5}
+.hw-img:not(.st-art) img{object-position:50% 20%!important}
+.qz-consent[hidden]{display:none}

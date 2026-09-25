@@ -7,7 +7,7 @@
 <meta name="description" content="Staph Aid Probiotic Capsules: 17 billion CFU and Vitamin C in one daily capsule, formulated to support your immune system. Free Starter Kit with refills.">
 <title>Home — Staph Aid prototype</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Fredoka:wght@600;700&family=DM+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/site.css?v=e42bc9c7">
+<link rel="stylesheet" href="css/site.css?v=30bd080a">
 </head>
 <body>
 <div class="announce" aria-label="Announcements">
@@ -86,9 +86,8 @@ addEventListener('scroll',function(){if(h.classList.contains('hr-fixed')&&!h.cla
 </div>
 <div class="cta-stack"><a class="btn btn-primary btn-lg" href="product.html">Try Risk-Free Today</a><div class="small">30-Day Money-Back Guarantee</div></div>
 </div></div>
-<div class="facts-track"><div class="mega-facts big-text"><span class="fx">17 billion CFU</span><span class="fx">2 probiotic strains</span><span class="fx">+ Vitamin C</span><span class="fx hl">1 capsule a day</span></div></div>
 <div class="big-sub rv"><h2 class="h2 h2-sm">Staph Aid Can Help Protect You</h2><p><b>Everyday Protection For The Most Vulnerable</b><br>Staph infections are dangerous for everyone, especially our loved ones who are the most at risk. Nursing home residents, Nurses, Children, Student Athletes, and the Military.</p></div>
-<div class="bag-track"><div class="bag-stage"><div class="bag-fill" aria-hidden="true"></div><div class="mega-bag rv"><div class="bag-wrap"><img class="bag-back" src="assets/pouch-torn.webp" alt="An open Staph Aid capsule packet"><img class="bag-billy" src="assets/billy-seal.webp" alt="Billy Bacillus popping out of the packet"><img class="bag-front" src="assets/pouch-torn-front.webp" alt=""></div></div></div></div>
+<div class="bag-track"><div class="bag-stage"><div class="bag-fill" aria-hidden="true"></div><div class="mega-facts big-text"><span class="fx">17 billion CFU</span><span class="fx">2 probiotic strains</span><span class="fx">+ Vitamin C</span><span class="fx hl">1 capsule a day</span></div><div class="mega-bag rv"><div class="bag-wrap"><img class="bag-back" src="assets/pouch-torn.webp" alt="An open Staph Aid capsule packet"><img class="bag-billy" src="assets/billy-seal.webp" alt="Billy Bacillus popping out of the packet"><img class="bag-front" src="assets/pouch-torn-front.webp" alt=""></div></div></div></div>
 </section>
 <section class="section section-dark"><div class="wrap test-grid">
 <div class="stack" style="gap:16px"><h2 class="h2 h2-sm">Quality You Can Trust</h2><p class="body">Our capsules are regularly tested for probiotics and vitamins to ensure label claims are accurate and clear of contaminants including: <span class="marker">[S: these four figures are Grüns' — replace with Staph Aid's own COA panel]</span></p></div>
@@ -392,14 +391,15 @@ if(/[?&]popup=1/.test(location.search))open();else if(!seen)setTimeout(open,8000
   // so he pops again every time you scroll back to it
   var bag=document.querySelector('.mega-bag');
   if(bag){
-    if(reduce||!('IntersectionObserver' in window)){ bag.classList.add('pop'); }
+    if(reduce||!('IntersectionObserver' in window)){ bag.classList.add('pop'); [].forEach.call(document.querySelectorAll('.mega-facts .fx'),function(e){e.classList.add('on')}); }
     else{
       /* v0.9.66 (Dan): Grüns pinned finale. The packet stage sticks while you scroll the tall track; the purple
          fill rises from the bottom until it covers almost the whole window, Billy pops partway, then the page moves on. */
-      var btrack=document.querySelector('.bag-track'),bstage=document.querySelector('.bag-stage'),btk=false;
+      /* v0.9.76 (Dan): one pinned stage, Grüns-style — the fact lines reveal at the top one by one while the fill rises behind the packet at the bottom, then Billy pops. */
+      var btrack=document.querySelector('.bag-track'),bstage=document.querySelector('.bag-stage'),btk=false,fxl=[].slice.call(bstage.querySelectorAll('.fx'));
       root.classList.add('bag-pin');
       function prog(){btk=false;var r=btrack.getBoundingClientRect(),span=r.height-innerHeight,p=span>0?Math.min(1,Math.max(0,-r.top/span)):1;
-        bstage.style.setProperty('--p',p.toFixed(3));bag.classList.add('in');bag.classList.toggle('pop',p>0.22)}
+        bstage.style.setProperty('--p',p.toFixed(3));bag.classList.add('in');bag.classList.toggle('pop',p>0.5);var sp=innerHeight*0.5-r.top;fxl.forEach(function(e,i){e.classList.toggle('on',sp>=i*innerHeight*0.28)})}
       addEventListener('scroll',function(){if(!btk){btk=true;requestAnimationFrame(prog)}},{passive:true});addEventListener('resize',prog);prog();
     }
   }

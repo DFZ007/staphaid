@@ -1776,3 +1776,19 @@ main:has(.pol){background:var(--white)}
    the next section follows right under it instead of half a screen of empty purple. */
 .bag-pin .bag-stage{align-items:flex-end;padding-bottom:clamp(28px,5vh,56px);box-sizing:border-box}
 @media(prefers-reduced-motion:reduce){.bag-pin .bag-stage{align-items:center;padding-bottom:80px}}
+/* v0.9.76 (Dan): single pinned finale. Facts at the top of the stage, packet at the bottom, fill rises behind. */
+.bag-pin .bag-track{height:260vh}
+.bag-pin .bag-stage{flex-direction:column;justify-content:space-between;align-items:center;padding-top:clamp(56px,9vh,110px)}
+.bag-stage .mega-facts{position:relative;z-index:2;padding:0 var(--gutter);height:auto;font-size:min(clamp(44px,8vw,96px),8.4vh);gap:.06em}
+.bag-pin .bag-stage .mega-facts .fx{opacity:0;transform:translateY(40px) scale(.96);transition:opacity .5s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+.bag-pin .bag-stage .mega-facts .fx.on{opacity:1;transform:none}
+.bag-pin .mega-bag .bag-wrap{width:min(400px,60vw,42vh)}
+.mega .big-sub{padding-bottom:24px}
+@media(max-width:760px){.bag-pin .bag-track{height:230vh}.bag-stage .mega-facts{font-size:min(40px,10vw)}}
+@media(prefers-reduced-motion:reduce){.bag-pin .bag-stage{justify-content:center;gap:40px}.bag-stage .mega-facts .fx{opacity:1;transform:none}}
+.bag-stage .mega-facts{font-size:min(clamp(44px,8vw,96px),7.2vh)}
+.bag-pin .mega-bag .bag-wrap{width:min(400px,60vw,38vh);transform:none}
+.bag-pin .mega-bag.pop .bag-billy{transform:translate(-50%,-92%) rotate(5deg)}
+@media(max-width:760px){.bag-stage .mega-facts{font-size:min(40px,10vw,6vh)}}
+.bag-pin .bag-track{height:220vh}
+@media(max-width:760px){.bag-pin .bag-track{height:210vh}}

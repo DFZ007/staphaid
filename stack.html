@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tech stack — Staph Aid prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Fredoka:wght@600;700&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css?v=29144f88">
+</head>
+<body><main class="rg"><div class="rg-in">
+<p class="eyebrow">For Brad · tech stack</p>
+<h1 class="rg-h1">What the new site runs on, and what it costs</h1>
+<p class="rg-lede">The short version: <b>stay on Shopify, put a custom theme on it, and add four low-cost apps.</b> That is about <b>$84 a month at launch</b>
+and grows with sales. Grüns uses premium apps: their subscription app alone would cost about $750 a month at our likely early volume. We don't need that until sales justify it,
+and every app below can be swapped later without rebuilding the site.</p>
+
+<h2 class="rg-h2">1. The recommended stack</h2>
+<table class="rg-t st-t st-core"><thead><tr><th>Job</th><th>Tool</th><th>Monthly</th><th>Why</th></tr></thead><tbody><tr><td><b>Store platform</b></td><td>Shopify Basic</td><td>$39<small>$29 if paid yearly</small></td><td>Keeps Shop Pay, checkout, tax and hosting. Move to Grow ($105) when card sales pass about $33k a month: its lower card rate (2.7% vs 2.9%) pays for the difference from there.</td></tr><tr><td><b>Theme</b></td><td>Custom Liquid theme built from this prototype</td><td>$0</td><td>Built in Claude Code as Shopify "sections", so a new offer page is cloned in the theme editor with no code. Replaces the Shrine PRO theme the live site runs.</td></tr><tr><td><b>Subscriptions</b></td><td>Appstle Subscriptions</td><td>$10–$100<small>0% transaction fee</small></td><td>$10 up to $5k/mo in subscription sales, $30 up to $15k, $100 up to $100k. The buy box uses Shopify's own subscription plans, so it isn't locked to this app.</td></tr><tr><td><b>Reviews</b></td><td>Judge.me</td><td>$0–$15</td><td>Free plan covers unlimited reviews, photos and Google stars. $15 adds the Klaviyo link and review reminders. Can import the old reviews.</td></tr><tr><td><b>Email + SMS</b></td><td>Klaviyo (Email + SMS)</td><td>$35–$165</td><td>$35 at 500 contacts, $45 at 1,000, $115 at 5,000, $165 at 10,000. Runs the quiz popup, the phone capture and all the automated emails. Texts beyond the included credits cost extra.</td></tr><tr><td><b>Support</b></td><td>Shopify Inbox + hello@ email</td><td>$0</td><td>Add Gorgias ($10/mo, 50 tickets) when email support gets busy.</td></tr><tr><td><b>Tracking</b></td><td>Google Analytics 4, Meta and TikTok via Shopify's free apps</td><td>$0</td><td>GA4 is already on the live site. Nothing else goes in until an ad channel is live.</td></tr><tr><td><b>Bundles &amp; discounts</b></td><td>Shopify's built-in discounts</td><td>$0</td><td>BUY2GET1 / BUY3GET2 and "discount auto-applied" all run without an app.</td></tr></tbody></table>
+
+<h2 class="rg-h2">2. Monthly cost as sales grow</h2>
+<table class="rg-t st-t"><thead><tr><th>Stage</th><th>Subscription sales</th><th>What you pay for</th><th>Apps + Shopify</th></tr></thead><tbody><tr><td>Launch</td><td>under $5k/mo</td><td>Basic $39 · Appstle $10 · Judge.me $0 · Klaviyo $35 · Support $0</td><td><b>$84</b></td></tr><tr><td>Growing</td><td>about $15k/mo</td><td>Basic $39 · Appstle $30 · Judge.me $15 · Klaviyo about $75 · Gorgias $10</td><td><b>about $169</b></td></tr><tr><td>Scaling</td><td>about $50k/mo</td><td>Grow $105 · Appstle $100 · Judge.me $15 · Klaviyo $165 · Gorgias $60</td><td><b>$445</b></td></tr></tbody></table>
+<p class="st-note">Card fees are separate and usually the biggest cost: Shopify Payments takes 2.9% + 30¢ per order on Basic (about $365 on $10k of sales at a $40 average order). Every Shopify store pays this, whatever the apps.</p>
+
+<h2 class="rg-h2">3. Why not the subscription app Grüns uses?</h2>
+<p class="st-p">Subscriptions are where app costs balloon, because most of these apps take a cut of every order. Here is the monthly bill for each one at $10k of subscription sales (about 250 orders):</p>
+<table class="rg-t st-t"><thead><tr><th>App</th><th>Plan fee</th><th>Cut per order</th><th>Total at $10k/mo</th></tr></thead><tbody><tr><td><b>Appstle</b> <em>pick</em></td><td>$30</td><td>0%</td><td><b>$30</b></td></tr><tr><td>Loop</td><td>$99</td><td>1%</td><td>$199</td></tr><tr><td>Recharge</td><td>$99</td><td>1.49% + 19¢</td><td>$296</td></tr><tr><td>Skio <small>what Grüns uses</small></td><td>$599</td><td>1% + 20¢</td><td>$749</td></tr><tr><td>Shopify Subscriptions</td><td>$0</td><td>0%</td><td>$0 <small>but no customer portal, and rated 3.7/5</small></td></tr></tbody></table>
+<p class="st-note">Skio and Recharge are built for brands doing six figures a month. Move to one of them only when you need something Appstle can't do.</p>
+
+<h2 class="rg-h2">4. What we are not recommending</h2>
+<ol class="rg-l">
+<li><b>A page-builder app</b> (Replo, GemPages, PageFly: $30–$300/mo). The theme's own sections let you clone an offer page without code, which is the job these apps do.</li>
+<li><b>Going "headless"</b> (a custom front end talking to Shopify). It's faster in theory, but it costs far more to build and maintain, and gains nothing at this size.</li>
+<li><b>A custom Stripe checkout instead of Shopify.</b> You'd lose Shop Pay, which returning buyers use for one-tap checkout, and we'd have to build tax, subscriptions and order management ourselves.</li>
+<li><b>A loyalty app</b> right now. It's worth adding once there are enough repeat buyers to reward.</li>
+</ol>
+
+<h2 class="rg-h2">5. Questions for you before we build</h2>
+<ol class="rg-l">
+<li><b>Which subscription app runs the live store today, and how many active subscribers are on it?</b> The live store already sells subscriptions through an app we couldn't identify from the outside. Moving live subscribers without double-charging or dropping anyone is the riskiest step of the switch, and the plan depends on this answer.</li>
+<li><b>Which Shopify plan are you on now?</b> If it's already Basic, the platform cost doesn't change.</li>
+<li><b>Do you already pay for an email or SMS tool?</b> We saw no email, SMS or reviews app on the live storefront.</li>
+<li><b>Who ships the orders</b> (you, a warehouse, a 3PL)? That decides whether a shipping app is needed.</li>
+</ol>
+
+<p class="rg-foot">Prices were checked on each vendor's pricing page or Shopify App Store listing on September 25, 2026, and they change. The Klaviyo figure at 2,500 contacts is an estimate between published tiers. Theme build, photography and illustration are one-off costs and aren't included here.<br><br>
+<b>Sources:</b> <a href="https://www.shopify.com/pricing">Shopify pricing</a> · <a href="https://apps.shopify.com/subscriptions-by-appstle">Appstle</a> · <a href="https://apps.shopify.com/subscription-payments">Recharge</a> · <a href="https://skio.com/pricing">Skio</a> · <a href="https://apps.shopify.com/loop-subscriptions">Loop</a> · <a href="https://apps.shopify.com/shopify-subscriptions">Shopify Subscriptions</a> · <a href="https://apps.shopify.com/judgeme">Judge.me</a> · <a href="https://www.emailtooltester.com/en/reviews/klaviyo/pricing/">Klaviyo pricing (Aug 2026)</a> · <a href="https://apps.shopify.com/helpdesk">Gorgias</a></p>
+</div></main>
+<nav class="proto" aria-label="Prototype pages"><span>v0.9</span><a href="index.html">Home</a><a href="shop.html">Shop all</a><a href="product.html">Product</a><a href="gifts.html">Gifts</a><a href="offer.html">Offer page</a><a href="cart.html">Cart</a><a href="science.html">Science</a><a href="story.html">Our story</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="refund-policy.html">Policies</a><a href="404.html">404</a><a href="review.html">Review guide</a><a href="stack.html" class=on>Tech stack</a></nav>
+</body></html>

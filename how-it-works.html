@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Our story — Staph Aid prototype</title>
+<title>How it works — Staph Aid prototype</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Fredoka:wght@600;700&family=DM+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/site.css?v=0e17a879">
 </head>
@@ -36,25 +36,41 @@ document.addEventListener('click',function(e){if(h.classList.contains('menu-open
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('menu-open')){set(false);b.focus()}});
 addEventListener('scroll',function(){if(h.classList.contains('hr-fixed')&&!h.classList.contains('hr-show')&&h.classList.contains('menu-open'))set(false)},{passive:true});})();</script><script>(function(){var h=document.querySelector(".header");if(!h)return;/* v0.9.32 (Dan): header scrolls away with the page, then slides back in whenever you scroll up. */var last=scrollY,fixed=false,hh=h.offsetHeight,start=h.getBoundingClientRect().top+scrollY,tick=false;function fix(on){fixed=on;if(on){h.classList.add("hr-fixed");requestAnimationFrame(function(){h.classList.add("hr-anim")})}else{h.classList.remove("hr-fixed","hr-anim","hr-show")}}function f(){tick=false;var y=scrollY; if(y<=start){if(fixed)fix(false)} else if(!fixed&&y>start+hh+40){fix(true)} if(fixed){if(y<last-3)h.classList.add("hr-show");else if(y>last+3)h.classList.remove("hr-show")} last=y}addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(f)}},{passive:true});addEventListener("resize",function(){if(!fixed){hh=h.offsetHeight;start=h.getBoundingClientRect().top+scrollY}});f()})();</script>
 <main>
-<section class="hw-hero st-hero"><div class="wrap">
-<h1 class="hw-h1 st-h1">We&rsquo;re a brand focused on the health and wellness of our community.</h1>
-<p class="st-sub">Staph Aid LLC &middot; Sacramento, California</p>
+<section class="hw-hero"><div class="wrap">
+<h1 class="hw-h1">How Staph Aid Works</h1>
+<nav class="hw-jumps" aria-label="On this page"><a href="#science">The Science</a><a href="#ritual">Your Daily Ritual</a><a href="#first-90">Your First 90 Days</a></nav>
 </div></section>
 
-<section class="section hw-sec hw-tint"><div class="wrap"><div class="hw-grid"><div class="hw-card"><div class="hw-img st-art "><img src="assets/wild-nurse-v3.webp" alt="Nurse holding a Staph Aid pouch" loading="lazy" style="object-position:50% 30%"></div><h3 class="hw-t">Built for the one in three</h3><p>One in three people carry <i>Staphylococcus aureus</i> without knowing it. Most never have a problem. Some end up with an infection that will not let go: a recurring boil, a skin flare that keeps coming back, a round of antibiotics that works until it doesn&rsquo;t. Staph Aid was built for them. <span class="marker">[V]</span></p></div><div class="hw-card"><div class="hw-img st-art "><img src="assets/wild-caregiver.webp" alt="Caregiver and resident laughing with a Staph Aid pouch" loading="lazy" style="object-position:50% 40%"></div><h3 class="hw-t">A daily habit, not a cure</h3><p>Staph Aid is not a cure and not a replacement for a doctor. It is a daily habit that supports the body&rsquo;s own defenses. If you have an infection, see a doctor today: staph and MRSA infections can be serious. <span class="legal">LEGAL</span></p></div><div class="hw-card"><div class="hw-img st-art st-lav"><img class="st-billy" src="assets/billy-thumbs.webp" alt="Billy Bacillus giving a thumbs up"></div><h3 class="hw-t">Our Standards: Nothing To Hide</h3><p>One capsule and three active ingredients, with nothing hidden behind a proprietary blend. We will not tell you this treats an infection. We will tell you exactly what is inside, and prove it with third-party testing.</p></div></div>
-<p class="st-note"><span class="marker">[Brad: founder names, founding year and the origin story go here &mdash; this is the one section Grüns has that we can&rsquo;t fake]</span></p></div></section>
-
-<section class="section hw-sec hw-white"><div class="wrap">
-<div class="hw-head"><h2 class="hw-h2">Not Cutting Corners</h2></div>
-<div class="hw-grid"><div class="hw-card"><div class="hw-img st-art st-red"><img class="st-pouch" src="assets/single.webp" alt="Staph Aid Probiotic Capsules pouch"></div><h3 class="hw-t">Ingredients</h3><p><i>Bacillus subtilis</i>, <i>Bacillus coagulans</i> and Vitamin C: 17 billion CFU in a single capsule. Vegan, gluten-free, dairy-free, nut-free and non-GMO, with no gelatin, synthetic dyes or synthetic sweeteners.</p></div><div class="hw-card"><div class="hw-img st-art st-gold"><img class="st-caps" src="assets/capsule.webp" alt="A red Staph Aid capsule"><img class="st-caps st-caps2" src="assets/capsule.webp" alt=""></div><h3 class="hw-t">Manufacturing</h3><p>Staph Aid is manufactured in NSF, GMP and FDA registered facilities. <span class="marker">[S]</span></p></div><div class="hw-card"><div class="hw-img st-art "><img src="assets/nutrition.webp" alt="Staph Aid supplement facts panel" loading="lazy" style="object-position:50% 50%"></div><h3 class="hw-t">Real Testing</h3><p>Every batch is third party tested for purity and potency, including heavy metals and contaminants. <span class="marker">[S]</span></p></div></div>
+<section class="section hw-sec hw-tint" id="science"><div class="wrap">
+<div class="hw-head"><h2 class="hw-h2">The Science: Formulated From Published Research</h2>
+<p class="hw-mono">Our active ingredients were shown to control staph colonization in a phase 2, double-blind, randomized, placebo-controlled trial.&sup1; <span class="legal">LEGAL</span></p></div>
+<div class="hw-grid"><div class="hw-card"><div class="hw-img"><img src="assets/wild-dojo.webp" alt="Martial artist holding a Staph Aid pouch in a dojo" loading="lazy" style="object-position:50% 55%"></div><h3 class="hw-t">Targets Staph Where It Lives</h3><p>Participants showed a reduction of <i>S. aureus</i> in the nose and gut when tested. Staph Aid pairs two spore-forming probiotic strains, <i>Bacillus subtilis</i> and <i>Bacillus coagulans</i>, built to survive the trip through your stomach. <span class="legal">LEGAL</span></p></div><div class="hw-card"><div class="hw-img"><img src="assets/proof-gym-v2.webp" alt="Man at the gym holding a Staph Aid pouch" loading="lazy" style="object-position:50% 62%"></div><h3 class="hw-t">Interrupts, Doesn&rsquo;t Kill</h3><p>The probiotic appears to interrupt the signalling staph uses to colonize, rather than killing it outright. That is the finding behind every capsule. <span class="legal">LEGAL</span></p></div><div class="hw-card"><div class="hw-img"><img src="assets/wild-yoga.webp" alt="Woman on a yoga mat in the park holding a Staph Aid pouch" loading="lazy" style="object-position:50% 38%"></div><h3 class="hw-t">Backed By Vitamin C</h3><p>Staph Aid is packed with probiotics and vitamins shown to fight off bacteria and viruses, supporting your immune system every single day. 17 billion CFU plus Vitamin C in one capsule.</p></div></div>
 </div></section>
 
-<section class="st-cta"><div class="wrap">
-<h2>Ready to protect yourself <em>from the inside</em>?</h2>
-<a class="st-cta-btn" href="product.html">Get Staph Aid</a>
+<section class="press" aria-label="Press">
+<div class="press-track"><div class="press-item"><q>researchers discover that a probiotic bacterium can destroy this superbug.</q><img src="assets/press-mnt.svg" alt="Medical News Today"></div>
+<div class="press-item"><q>Probiotic proves its might for staph decolonization</q><img src="assets/press-mpt.svg" alt="MedPage Today"></div>
+<div class="press-item"><q>Probiotic Good Bacteria Use Fengycins to Eliminate Bad Bacteria</q><img src="assets/press-gen.webp" alt="Genetic Engineering &amp; Biotechnology News"></div>
+<div class="press-item"><q>The Probiotic Tells Staph to “Keep it Low” ... to stop growing! Fascinating, isn't it?</q><img src="assets/press-gutxy.svg" alt="Gutxy"></div><span class="press-dup" aria-hidden="true" style="display:contents"><div class="press-item"><q>researchers discover that a probiotic bacterium can destroy this superbug.</q><img src="assets/press-mnt.svg" alt="Medical News Today"></div>
+<div class="press-item"><q>Probiotic proves its might for staph decolonization</q><img src="assets/press-mpt.svg" alt="MedPage Today"></div>
+<div class="press-item"><q>Probiotic Good Bacteria Use Fengycins to Eliminate Bad Bacteria</q><img src="assets/press-gen.webp" alt="Genetic Engineering &amp; Biotechnology News"></div>
+<div class="press-item"><q>The Probiotic Tells Staph to “Keep it Low” ... to stop growing! Fascinating, isn't it?</q><img src="assets/press-gutxy.svg" alt="Gutxy"></div></span></div>
+</section>
+<p class="hw-press-note">The quotes above report on the underlying NIH research into <i>B. subtilis</i>. They are not coverage of Staph Aid.</p>
+
+<section class="section hw-sec hw-white" id="ritual"><div class="wrap">
+<div class="hw-head"><h2 class="hw-h2">Your Daily Ritual</h2>
+<p class="hw-mono">Staph Aid is one capsule a day, with a meal. 17 billion CFU, 2 probiotic strains and Vitamin C, taste-free and gentle, so protection fits into the life you already live.</p></div>
+<div class="hw-grid"><div class="hw-card"><div class="hw-img"><img src="assets/hero-portrait-v3.webp" alt="Woman pouring a Staph Aid capsule from the pouch into her palm" loading="lazy" style="object-position:50% 45%"></div><h3 class="hw-t">One Capsule</h3><p>Two probiotic strains and Vitamin C in a single capsule. Staph Aid capsules are taste-free, gentle and easy to take, without reflux or discomfort.</p></div><div class="hw-card"><div class="hw-img"><img src="assets/wild-couple-v2.webp" alt="Couple at breakfast, one holding a Staph Aid capsule" loading="lazy" style="object-position:50% 40%"></div><h3 class="hw-t">With A Meal</h3><p>You can take Staph Aid capsules with or without food, but we recommend taking them with food. Breakfast, lunch or dinner: pick the one you never skip.</p></div><div class="hw-card"><div class="hw-img"><img src="assets/wild-locker.webp" alt="College athlete dropping a Staph Aid pouch into his gym bag" loading="lazy" style="object-position:50% 55%"></div><h3 class="hw-t">Every Day, Anywhere</h3><p>One pouch lives in your gym bag, your desk or your kitchen counter. Consistent daily use is essential for the best results.</p></div></div>
 </div></section>
 
-<section class="section bg-tint"><div class="wrap">
+<section class="section hw-sec hw-tint" id="first-90"><div class="wrap">
+<div class="hw-head"><h2 class="hw-h2">Your First 90 Days</h2>
+<p class="hw-mono">We recommend taking Staph Aid every day for at least 3 months to achieve full effect. Here is what that journey looks like.</p></div>
+<div class="hw-grid"><div class="hw-card"><div class="hw-img"><img src="assets/wild-service.webp" alt="Service member holding a Staph Aid pouch outdoors" loading="lazy" style="object-position:50% 55%"></div><h3 class="hw-t">After 30 Days:</h3><p>Building the habit. One capsule a day, every day, becomes part of your routine. Some individuals may notice improvements within days or weeks. <span class="legal">LEGAL</span></p></div><div class="hw-card"><div class="hw-img"><img src="assets/wild-caregiver.webp" alt="Caregiver and resident laughing together with a Staph Aid pouch" loading="lazy" style="object-position:50% 55%"></div><h3 class="hw-t">After 60 Days:</h3><p>Staying consistent. The timeline for experiencing the benefits of Staph Aid can vary from person to person; for some it is more gradual. Keep going. <span class="legal">LEGAL</span></p></div><div class="hw-card"><div class="hw-img"><img src="assets/proof-friends-v2.webp" alt="Friends laughing at a café table with a Staph Aid pouch" loading="lazy" style="object-position:50% 62%"></div><h3 class="hw-t">After 90 Days:</h3><p>Full effect. We recommend taking Staph Aid every day for at least 3 months to achieve full effect. Make it part of your protection plan for good. <span class="legal">LEGAL</span></p></div></div>
+</div></section>
+
+<section class="section bg-white"><div class="wrap">
 <div class="vp-head"><h2 class="h2">Real Results,<br>Real Customers</h2><div class="rev-tabs"><span class="on">Immunity</span><span>Skin</span><span>Gut</span></div></div>
 <div class="revs">
 <div class="card rev"><div class="rev-score"><span class="stars">★★★★★</span>5.0</div><b>I love this!</b><p>I've been using this product for 3 months and the results are incredible. My immune system feels so much stronger!</p><div class="who"><img class="who-pic" src="assets/review-jessica.webp" alt="Jessica T."><div>Jessica T.<small>Verified Customer <span class="legal">VERIFY</span></small></div></div></div>
@@ -62,7 +78,7 @@ addEventListener('scroll',function(){if(h.classList.contains('hr-fixed')&&!h.cla
 <div class="card rev"><div class="rev-score"><span class="stars">★★★★★</span>4.9</div><b>Finally.</b><p>I needed this so bad, finally broke the cycle. I was so tired of constantly having to go to the dermatologist for antibiotics.</p><div class="who"><img class="who-pic" src="assets/review-amanda.webp" alt="Amanda K."><div>Amanda K.<small>Verified Customer <span class="legal">VERIFY</span></small></div></div></div>
 </div>
 </div></section>
-<section class="section bg-tint vr-tight vr-sec"><div class="wrap"><div class="vr-row"><button type="button" class="vr-card" data-src="assets/vid-1.mp4" aria-label="Play customer video: Her Story"><video muted loop playsinline preload="none" poster="assets/vid-1.webp"><source src="assets/vid-1.mp4" type="video/mp4"></video><span class="vr-chip">Her Story</span><span class="vr-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></button><button type="button" class="vr-card" data-src="assets/vid-2.mp4" aria-label="Play customer video: On The Go"><video muted loop playsinline preload="none" poster="assets/vid-2.webp"><source src="assets/vid-2.mp4" type="video/mp4"></video><span class="vr-chip">On The Go</span><span class="vr-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></button><button type="button" class="vr-card" data-src="assets/vid-3.mp4" aria-label="Play customer video: Why I Take It"><video muted loop playsinline preload="none" poster="assets/vid-3.webp"><source src="assets/vid-3.mp4" type="video/mp4"></video><span class="vr-chip">Why I Take It</span><span class="vr-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></button></div><p class="vr-note">Real customers sharing their own experiences. Individual results may vary. <span class="legal">LEGAL</span></p></div></section>
+<section class="section bg-white vr-tight vr-sec"><div class="wrap"><div class="vr-row"><button type="button" class="vr-card" data-src="assets/vid-1.mp4" aria-label="Play customer video: Her Story"><video muted loop playsinline preload="none" poster="assets/vid-1.webp"><source src="assets/vid-1.mp4" type="video/mp4"></video><span class="vr-chip">Her Story</span><span class="vr-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></button><button type="button" class="vr-card" data-src="assets/vid-2.mp4" aria-label="Play customer video: On The Go"><video muted loop playsinline preload="none" poster="assets/vid-2.webp"><source src="assets/vid-2.mp4" type="video/mp4"></video><span class="vr-chip">On The Go</span><span class="vr-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></button><button type="button" class="vr-card" data-src="assets/vid-3.mp4" aria-label="Play customer video: Why I Take It"><video muted loop playsinline preload="none" poster="assets/vid-3.webp"><source src="assets/vid-3.mp4" type="video/mp4"></video><span class="vr-chip">Why I Take It</span><span class="vr-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></button></div><p class="vr-note">Real customers sharing their own experiences. Individual results may vary. <span class="legal">LEGAL</span></p></div></section>
 <div class="vr-modal" id="vr-modal" role="dialog" aria-modal="true" aria-label="Customer video" hidden>
 <button type="button" class="vr-x" aria-label="Close video">&times;</button><video controls playsinline></video></div>
 <script>(function(){var cards=[].slice.call(document.querySelectorAll('.vr-card'));if(!cards.length)return;
@@ -72,16 +88,30 @@ var m=document.getElementById('vr-modal'),mv=m.querySelector('video'),last;
 function close(){mv.pause();mv.removeAttribute('src');mv.load();m.hidden=true;document.documentElement.classList.remove('qz-lock');if(last)last.focus()}
 cards.forEach(function(c){c.addEventListener('click',function(){last=c;mv.src=c.dataset.src;m.hidden=false;document.documentElement.classList.add('qz-lock');mv.currentTime=0;var p=mv.play();if(p&&p.catch)p.catch(function(){});m.querySelector('.vr-x').focus()})});
 m.querySelector('.vr-x').onclick=close;m.addEventListener('click',function(e){if(e.target===m)close()});document.addEventListener('keydown',function(e){if(!m.hidden&&e.key==='Escape')close()});})();</script>
-<section class="section bg-white wild" aria-label="Staph Aid out in the world">
-<div class="wrap wild-head">
-<h2 class="wild-hl"><span class="duo-b">From the mat</span><span class="duo-a">to the locker room</span></h2>
-<div class="wild-social"><a href="https://instagram.com/staphaidhq" aria-label="Staph Aid on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://tiktok.com/@staphaidhq" aria-label="Staph Aid on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.3 1.9 3.8 4.2 4v3.1c-1.5 0-2.9-.4-4.2-1.2v6.3c0 3.5-2.7 6-6 6-3.2 0-5.8-2.5-5.8-5.8 0-3.5 3-6.1 6.6-5.7v3.2c-1.8-.4-3.4.8-3.4 2.5 0 1.4 1.1 2.6 2.6 2.6 1.6 0 2.8-1.2 2.8-3V3z"/></svg></a></div>
-</div>
-<div class="wheel" aria-hidden="true"><figure class="wcard" data-i="0"><img src="assets/wild-dojo.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="1"><img src="assets/wild-nurse-v3.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="2"><img src="assets/wild-yoga.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="3"><img src="assets/wild-couple-v2.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="4"><img src="assets/wild-bjj.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="5"><img src="assets/wild-caregiver.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="6"><img src="assets/wild-locker.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="7"><img src="assets/wild-climb.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="8"><img src="assets/wild-soccer.webp" alt="" loading="lazy"></figure><figure class="wcard" data-i="9"><img src="assets/wild-service.webp" alt="" loading="lazy"></figure></div>
-</section>
+<section class="section bg-tint"><div class="wrap buy-grid" style="align-items:center">
+<div class="stack"><h2 class="h2">Staph Aid vs. Other Brands</h2><div class="card cmp">
+<div class="cmp-row cmp-head"><span style="color:#c13535">Staph Aid</span><span>Other Brands</span></div>
+<div class="cmp-row"><span><span class="ck">✓</span> Clinically Backed</span><span class="no"><span class="xx">✗</span> Trend-Based Blends</span></div>
+<div class="cmp-row"><span><span class="ck">✓</span> 3rd-Party Tested</span><span class="no"><span class="xx">✗</span> No Test Proof</span></div>
+<div class="cmp-row"><span><span class="ck">✓</span> Allergen-Free &amp; Clean</span><span class="no"><span class="xx">✗</span> Fillers &amp; Additives</span></div>
+<div class="cmp-row"><span><span class="ck">✓</span> Global Certified Facilities</span><span class="no"><span class="xx">✗</span> Low-Quality Manufacturing</span></div>
+<div class="cmp-row"><span><span class="ck">✓</span> Vegan &amp; Gluten-Free</span><span class="no"><span class="xx">✗</span> Sugar, Flavors, Binders</span></div>
+</div><div class="cta-stack" style="align-items:flex-start"><a class="btn btn-primary btn-lg" href="product.html">Try Now-Risk Free</a><div class="small">30-day money back guarantee · 3rd Party Clinically Tested <span class="legal">LEGAL</span></div></div></div>
+<div class="img-card" id="facts"><img src="assets/nutrition.webp" alt="Nutrition label" style="width:100%;aspect-ratio:1;object-fit:cover"></div>
+</div></section>
+<section class="section pdp-faq hw-faq"><div class="wrap pdp-faq-grid">
+<div><h2 class="pdp-faq-h">Any last questions?</h2><p class="lead">No? <a href="#buy">Try Staph Aid Now</a></p></div>
+<div><div class="acc-wrap">
+<details class="acc" open><summary>When will I feel something?</summary><div class="body">We recommend taking them everyday for at least 3 month to achieve full effect. The timeline for experiencing the benefits of Staph Aid can vary from person to person. Some individuals may notice improvements within days or weeks, while for others, it may be more gradual. Consistent daily use is essential for the best results.</div></details>
+<details class="acc"><summary>When will my order arrive?</summary><div class="body">We're fast! Orders typically ship within 24 hours and on average arrive 3 days later. You could be enjoying improved health just 3/4 days from now.</div></details>
+<details class="acc"><summary>How do you handle returns or exchanges?</summary><div class="body">We want you to have the best experience with Staph Aid. Returns rarely happen, but we do have a great policy in place. You can return any unopened packs within 30 days of your first order for a refund or exchange. For all refund requests, you will receive the full value of your order (less $5 return shipping). Submitting a return takes about a minute, and we accept all returns in policy. No questions asked. If you have specific questions for your returns or exchange circumstance, our team at Staph Aid are eager to help! You can reach them at returns@staphaid.com. This policy applies only to your initial purchase.</div></details>
+<details class="acc"><summary>Are Staph Aid Capsules Gluten Free?</summary><div class="body">Yes we are happy to say all Staph Aid Capsules are gluten free.</div></details>
+<details class="acc"><summary>Are Staph Aid Capsules Vegan?</summary><div class="body">Yes, our Staph Aid capsules do not contain any gelatin or any ingredients from animals, making them vegan.</div></details>
+</div></div>
+</div></section>
 
 <section class="section bg-white" id="buy"><div class="wrap">
-<div class="buy-head"><h2 class="buy-hl"><span class="duo-a">Staph is everywhere.</span><span class="duo-b">Protection is here.</span> <span class="legal">LEGAL</span></h2></div>
+<div class="buy-head"><h2 class="buy-hl"><span class="duo-a">Try Risk-Free Today.</span><span class="duo-b">Save Up To 70% + a FREE Starter Kit.</span></h2></div>
 <div class="buy-grid">
 <div class="pdp-left"><div class="gallery gal2">
 <div class="thumbs"><div class="thumb on"><img src="assets/p2.webp" alt=""></div><div class="thumb"><img src="assets/single.webp" alt=""></div><div class="thumb"><img class="cover" src="assets/nutrition.webp" alt=""></div><div class="thumb"><img class="cover" src="assets/proof-skin.webp" alt=""></div><div class="thumb"><img class="cover" src="assets/proof-gym.webp" alt=""></div><div class="thumb"><img class="cover" src="assets/gfx-timeline.svg" alt=""></div></div>
@@ -179,29 +209,7 @@ function bind(els,key){els.forEach(function(e){function go(){st[key]=key==='b'?+
 bind(tiers,'b');bind(plans,'p');render();
 var au=box.querySelector('[data-eta]');if(au){var dt=new Date();dt.setDate(dt.getDate()+3);var n=dt.getDate(),sf=(n%10==1&&n!=11)?'st':(n%10==2&&n!=12)?'nd':(n%10==3&&n!=13)?'rd':'th';au.textContent='Order today, get it by '+dt.toLocaleString('en-US',{month:'long'})+' '+n+sf}})();</script></div>
 </div>
-</div></section>
-<script>
-(function(){
-  var wheel=document.querySelector('.wheel'); if(!wheel) return;
-  var cards=[].slice.call(wheel.querySelectorAll('.wcard')), n=cards.length;
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var t=0, last=performance.now(), paused=false;
-  function geo(){ var m=innerWidth<700; return {R:m?820:1500, step:m?19:14.8, speed:m?0.0024:0.0018}; }
-  function place(){
-    var g=geo(), span=n*g.step;
-    cards.forEach(function(c,i){
-      var a=((i*g.step - t*g.step) % span + span) % span - span/2;       // wraps around the wheel
-      c.style.transform='translateX(-50%) rotate('+a.toFixed(2)+'deg)';
-      c.style.transformOrigin='50% '+g.R+'px';
-      c.style.opacity=Math.abs(a)>g.step*4.2?0:1;
-    });
-  }
-  function tick(now){ var dt=now-last; last=now; if(!paused) t+=dt*geo().speed/10; place(); requestAnimationFrame(tick); }
-  wheel.addEventListener('mouseenter',function(){paused=true}); wheel.addEventListener('mouseleave',function(){paused=false});
-  addEventListener('resize',place); place();
-  if(!reduce) requestAnimationFrame(tick);
-})();
-</script></main>
+</div></section></main>
 <footer class="footer"><div class="footer-in">
 <div class="footer-capture" id="claim">
 <h4>Claim 60% Off!</h4>
@@ -305,5 +313,5 @@ document.addEventListener('keydown',function(e){if(!q.hidden&&e.key==='Escape')c
 [].forEach.call(document.querySelectorAll('[data-open-quiz]'),function(a){a.addEventListener('click',function(e){e.preventDefault();open()})});
 var seen=false;try{seen=localStorage.getItem('sa_qz')==='1'}catch(e){}
 if(/[?&]popup=1/.test(location.search))open();else if(!seen)setTimeout(open,8000);})();</script>
-<nav class="proto" aria-label="Prototype pages"><span>v0.9</span><a href="index.html">Home</a><a href="shop.html">Shop all</a><a href="product.html">Product</a><a href="gifts.html">Gifts</a><a href="cart.html">Cart</a><a href="science.html">Science</a><a href="how-it-works.html">How it works</a><a href="story.html" class=on>Our story</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="404.html">404</a><a href="fonts.html">Fonts</a><a href="review.html">Review guide</a><a href="stack.html">Tech stack</a><a href="archive.html">Archive</a></nav>
+<nav class="proto" aria-label="Prototype pages"><span>v0.9</span><a href="index.html">Home</a><a href="shop.html">Shop all</a><a href="product.html">Product</a><a href="gifts.html">Gifts</a><a href="cart.html">Cart</a><a href="science.html">Science</a><a href="how-it-works.html" class=on>How it works</a><a href="story.html">Our story</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="404.html">404</a><a href="fonts.html">Fonts</a><a href="review.html">Review guide</a><a href="stack.html">Tech stack</a><a href="archive.html">Archive</a></nav>
 </body></html>

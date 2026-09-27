@@ -2592,3 +2592,35 @@ button.trust-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px r
 .seo-callout{margin:20px 0 8px;padding:16px 20px;border-radius:14px;background:var(--purple-wash);border-left:4px solid var(--secondary)}
 .seo-callout b{color:var(--secondary);font-size:16px}
 .seo-callout p{margin:6px 0 0;font-size:15px;line-height:1.6;color:var(--fg1)}
+
+/* ---- v0.9.87 (Brad, round 4) ---- */
+/* "1 in 3" stat badge: same circle as the other two, smaller joiner word */
+.stat b small{font-size:.42em!important;margin:0 2px!important;vertical-align:.35em}
+/* bundle tiles: per-bag and per-day line */
+.btile-unit{font-weight:600;color:var(--primary-strong)}
+/* "Made for..." strip, near the bottom of the homepage */
+.made4-h{text-align:center;margin:0 auto 32px}
+.made4-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.made4-card{display:flex;flex-direction:column;background:var(--white);color:var(--ink);text-decoration:none;border:1px solid var(--ink);border-radius:var(--r-card);overflow:hidden;box-shadow:3px 4px 0 0 var(--ink);transition:transform .2s var(--ease-out,ease)}
+.made4-card:hover{transform:translateY(-3px)}
+.made4-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.made4-body{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px}
+.made4-body b{font-size:18px;line-height:1.2;letter-spacing:-.02em}
+.made4-body span{font-size:14px;color:var(--fg2)}
+.made4-body em{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--primary-strong);margin-top:6px}
+@media(max-width:1023px){.made4-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.made4-card:last-child{grid-column:1/-1}.made4-card:last-child img{aspect-ratio:16/7}}
+@media(max-width:480px){.made4-body{padding:12px}.made4-body b{font-size:16px}}
+/* Science page: explainer video in the old placeholder slot */
+.sc-vid{margin-top:32px}
+.sc-vid video{display:block;width:100%;aspect-ratio:16/9;border-radius:var(--r-card);border:1px solid var(--ink);background:var(--ink)}
+.sc-vid-cap{margin-top:10px;font-size:14px;color:var(--fg2)}
+.sc-refs{margin:16px 0 0;padding-left:20px;font-size:13px;line-height:1.5;color:var(--fg2)}
+.sc-refs li+li{margin-top:4px}
+/* testing panel: labels instead of Grüns-style counts */
+.test-card{aspect-ratio:auto;justify-content:flex-start;gap:12px}
+.test-card svg{flex:none}
+.test-card span{font-weight:500;font-size:14px;max-width:16ch;color:var(--fg1i)}
+.test-card span b{display:block;font-size:19px;font-weight:700;color:var(--white);margin-bottom:4px}
+@media(max-width:480px){.qz-offer b{font-size:34px}}
+/* cart: savings line above checkout */
+.c2-saveline{text-align:center;font-weight:700;font-size:14px;color:var(--sage-strong);margin:0 0 10px}

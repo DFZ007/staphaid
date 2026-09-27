@@ -2678,3 +2678,18 @@ button.trust-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px r
  .made4-float{row-gap:18px}
  .m4f1,.m4f3,.m4f5{--y:6px}.m4f2,.m4f4{--y:-6px}
 }
+
+/* ---- v0.9.91 (Dan): footnotes live in the footer, above/beside the FDA line ---- */
+.footer-notes{list-style:none;margin:0;padding:0;font-size:12px;line-height:1.5;color:var(--fg2i)}
+.footer-notes li+li{margin-top:4px}
+.footer-notes sup{font-size:.75em;margin-right:2px}
+sup.fn{font-size:.62em;line-height:0;vertical-align:.55em;margin-left:1px}
+sup.fn a{color:inherit;text-decoration:none}
+sup.fn a:hover{text-decoration:underline}
+.stat span sup.fn{font-size:.55em}
+
+/* ---- v0.9.92 (Dan): Made for cards: no shadow/border; red label pill, centered at the bottom ---- */
+.m4f{border:0;box-shadow:none}
+.m4f-lab{left:10px;right:10px;bottom:14px;margin-inline:auto;width:fit-content;max-width:calc(100% - 20px);text-align:center;background:var(--primary);color:var(--primary-content);border:0}
+@media (max-width:1023px){.m4f-lab{left:8px;right:8px;bottom:10px;max-width:calc(100% - 16px)}}
+@media (max-width:1023px){.m4f{margin:-4px -3px}.m4f-lab{font-size:12px;padding:5px 10px;line-height:1.2}}

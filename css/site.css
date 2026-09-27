@@ -2598,18 +2598,6 @@ button.trust-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px r
 .stat b small{font-size:.42em!important;margin:0 2px!important;vertical-align:.35em}
 /* bundle tiles: per-bag and per-day line */
 .btile-unit{font-weight:600;color:var(--primary-strong)}
-/* "Made for..." strip, near the bottom of the homepage */
-.made4-h{text-align:center;margin:0 auto 32px}
-.made4-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
-.made4-card{display:flex;flex-direction:column;background:var(--white);color:var(--ink);text-decoration:none;border:1px solid var(--ink);border-radius:var(--r-card);overflow:hidden;box-shadow:3px 4px 0 0 var(--ink);transition:transform .2s var(--ease-out,ease)}
-.made4-card:hover{transform:translateY(-3px)}
-.made4-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.made4-body{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px}
-.made4-body b{font-size:18px;line-height:1.2;letter-spacing:-.02em}
-.made4-body span{font-size:14px;color:var(--fg2)}
-.made4-body em{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--primary-strong);margin-top:6px}
-@media(max-width:1023px){.made4-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.made4-card:last-child{grid-column:1/-1}.made4-card:last-child img{aspect-ratio:16/7}}
-@media(max-width:480px){.made4-body{padding:12px}.made4-body b{font-size:16px}}
 /* Science page: explainer video in the old placeholder slot */
 .sc-vid{margin-top:32px}
 .sc-vid video{display:block;width:100%;aspect-ratio:16/9;border-radius:var(--r-card);border:1px solid var(--ink);background:var(--ink)}
@@ -2624,3 +2612,41 @@ button.trust-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px r
 @media(max-width:480px){.qz-offer b{font-size:34px}}
 /* cart: savings line above checkout */
 .c2-saveline{text-align:center;font-weight:700;font-size:14px;color:var(--sage-strong);margin:0 0 10px}
+
+/* ---- v0.9.88 (Brad, round 5) ---- */
+/* buy box: brand logo in place of the product name, in every buy box */
+.buy-logo{line-height:0}
+.buy-logo img{display:block;width:clamp(210px,21vw,280px);height:auto}
+.buy-sub b{color:var(--ink)}
+/* review source labels (live-site copy vs. prototype sample) */
+.rv-src{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--fg3)}
+.rv-src.rv-sample{color:var(--secondary)}
+.rw-who .rv-src{display:block;margin-top:2px}
+.rw-more [hidden]{display:none}
+/* "Made for" strip: design pass - tall photo cards, display type, swipe row on phones */
+.made4{overflow:hidden;padding-block:clamp(64px,8vw,104px)}
+.made4-head{text-align:center;max-width:920px;margin:0 auto clamp(32px,4vw,52px)}
+.made4-kick{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--secondary-weak);margin:0 0 14px}
+.made4-h{font-family:var(--display);font-weight:800;font-size:clamp(38px,5.4vw,66px);line-height:.98;letter-spacing:-.01em;color:var(--white);margin:0}
+.made4-h span{display:block}
+.made4-h .made4-h2{color:var(--secondary-weak)}
+.made4-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.made4-card{position:relative;display:block;aspect-ratio:3/4.2;border-radius:var(--r-card);overflow:hidden;color:var(--white);text-decoration:none;border:1px solid var(--ink);box-shadow:3px 4px 0 0 var(--ink);transition:transform .25s ease}
+.made4-card:hover{transform:translateY(-4px)}
+.made4-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.made4-card:hover img{transform:scale(1.05)}
+.made4-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,17,19,0) 38%,rgba(26,17,19,.55) 62%,rgba(26,17,19,.9) 100%)}
+.made4-body{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:18px 16px}
+.made4-chip{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--primary);color:var(--primary-content);padding:5px 10px;border-radius:var(--r-pill);line-height:1.2}
+.made4-body b{font-family:var(--display);font-weight:800;font-size:clamp(20px,1.75vw,25px);line-height:1.05;letter-spacing:-.005em}
+.made4-go{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--fg1i)}
+.made4-go svg{width:16px;height:16px;transition:transform .2s ease}
+.made4-card:hover .made4-go svg{transform:translateX(4px)}
+@media(max-width:1023px){
+ .made4-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);margin-inline:calc(-1*var(--gutter));padding:0 var(--gutter) 10px;scrollbar-width:none}
+ .made4-grid::-webkit-scrollbar{display:none}
+ .made4-card{flex:0 0 min(70vw,280px);scroll-snap-align:start}
+}
+/* article sources: long URLs wrap on phones */
+.ar-src li,.ar-src a,.ar-body p,.ar-body li{overflow-wrap:anywhere}
+.rw-list .rw-item[hidden]{display:none!important}

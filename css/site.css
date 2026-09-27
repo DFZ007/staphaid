@@ -2589,3 +2589,6 @@ button.trust-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px r
 .cr-where{font-weight:700;width:14%}
 .cr-now{color:var(--muted);width:26%}
 .cr-new{background:rgba(63,122,94,.07);width:32%;color:var(--fg1)}
+.seo-callout{margin:20px 0 8px;padding:16px 20px;border-radius:14px;background:var(--purple-wash);border-left:4px solid var(--secondary)}
+.seo-callout b{color:var(--secondary);font-size:16px}
+.seo-callout p{margin:6px 0 0;font-size:15px;line-height:1.6;color:var(--fg1)}
